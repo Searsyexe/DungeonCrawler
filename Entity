@@ -1,4 +1,4 @@
-class Entity
+class Entity //class creation for entity class. every entity inherits to make location/health/keeping track of entities easier
 {
 public:
     int health;
@@ -7,7 +7,7 @@ public:
     int numentity;
     int entid;
     
-    Entity( int _health, int _locx, int _locy, int _numentity, int _entid )
+    Entity( int _health, int _locx, int _locy, int _numentity, int _entid ) //constructor for entity
     {
          health = _health;
          locx = _locx;
@@ -16,19 +16,19 @@ public:
          entid = _entid;
     }
     
-    void addentity()
+    void addentity() //adds a entity to entity count
     {
         numentity = numentity + 1
         entid = entid + 1
     }
     
-    void removeentity()
+    void removeentity() //removes entity to entity count. allows control of how many spawned
     {
         numentity = numentity - 1
         entid = ent - 1
     }
    
-    int getentityid()
+    int getentityid() //gets entity id so the game knows which entity is fighter or interacting at any time
     {
         return entid;
     }
