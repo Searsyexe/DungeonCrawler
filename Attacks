@@ -1,0 +1,41 @@
+int meleeattack() //works out the damage a player can deal based on their strength stat higher strength higher melee damage
+{
+    if ( player_strength >= 0 and player_strength <= 3) //least strength caps damage
+    {
+            damage = rand() % 2;
+            return damage;
+    }
+    if ( player_strength >= 4 and player_strength <= 7)
+    {
+            damage = rand() % 4;
+            return damage;
+    }
+    if ( player_strength >= 8 and player_strength <= 10) //highest strength means biggest change to deal most damage
+    {
+            damage = rand() % 6;
+            return damage;
+    }
+}
+
+int strengthofplayer() //calcuates and returns players strength based on any buffs can be added to if new buffs get added
+{
+    while ( player_strength > enemystrength ) //player gets a +1 buff if there strength is higher than the enemy
+    {
+            player_strength = player_strength + 1;
+    }
+    while ( hasweapon() == true) //if player has a weapon new strength can be calculated. melee weapons increase strength whereas ranged weapons will decrease
+    {
+            player_strength = player.strength + weaponstrength;
+    }
+    return player_strength;
+    
+    
+}
+
+
+
+
+
+
+int rangeattack()
+{
