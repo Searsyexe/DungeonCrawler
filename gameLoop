@@ -17,14 +17,15 @@ int playerattack()
     cin >> attackstyle;
     if (attackstyle == "Melee")
     {
-        
+        meleeattack()
+        enemy_health = enemy_health - damage
     }
     if (attackstyle == "Ranged")
     {
-      
+        rangedattack()
     }
     if (attackstyle == "Magic")
     {
-      
+        magicattack()
     }
 }
