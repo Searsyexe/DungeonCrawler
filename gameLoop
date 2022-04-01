@@ -1,0 +1,30 @@
+int combat()
+{
+    while ( player_health or enemy_health > 0)
+    {
+        playerattack()
+        if (enemy_health > 0)
+        {
+            enemyattack()
+        }
+    }
+    return 0;
+}
+
+int playerattack()
+{
+    std::cout << "What attack would you like to do? Melee, Ranged, Magic?" << std:endl;
+    cin >> attackstyle;
+    if (attackstyle == "Melee")
+    {
+        
+    }
+    if (attackstyle == "Ranged")
+    {
+      
+    }
+    if (attackstyle == "Magic")
+    {
+      
+    }
+}
