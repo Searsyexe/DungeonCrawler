@@ -2,10 +2,12 @@ class Player : public Entity
 {
 public:
     std::string subclass;
+    int strength;
     
-    Player(int _health, int _locx, int _locy, void, int entid, std::string _subclass) : Entity _health, _locx, _locy, _numentity, _entid)
+    Player(int _health, int _locx, int _locy, void, int entid, std::string _subclass, int _strength) : Entity _health, _locx, _locy, _numentity, _entid)
     {
     subclass = _subclass
+    strength = _strength
     }
     
     
