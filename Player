@@ -1,0 +1,58 @@
+class Player : public Entity
+{
+public:
+    std::string subclass;
+    
+    Player(int _health, int _locx, int _locy, void, int entid, std::string _subclass) : Entity _health, _locx, _locy, _numentity, _entid)
+    {
+    subclass = _subclass
+    }
+    
+    
+    int gethealth()
+    {
+        return player.health;
+    }
+    
+    bool bordercheck()
+    {
+        if (player.locx < (room.size + 1 and > 0)
+        {
+            moveplayer();
+        }
+        else
+        {
+            std::cout << "There is a wall blocking you from going there!" << std::endl;
+            movement();
+        }
+    }
+    
+    
+    int moveplayer()
+    {
+        if (direction == "n")
+        {
+            player.locy = player.locx + 1;
+            return player.locy
+        }
+        if (direction == "s")
+        {
+            player.locy = player.locy - 1;
+            return player.locy;
+        }
+        if (direction == "w")
+        {
+            player.locx = player.locx - 1;
+            return player.locx;
+        }
+        if (direction == "e")
+        {
+            player.locx = player.locx + 1;
+            return player.locx;
+        }
+        else
+        {
+          std::cout << "Please input either n,s,w,e!" << std::endl;
+        }
+    }
+};
