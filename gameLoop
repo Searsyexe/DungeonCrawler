@@ -1,31 +1,50 @@
-int combat()
+int combat() //combat function called whenever player gets into combat
 {
-    while ( player_health or enemy_health > 0)
+    while ( player_health or enemy_health > 0) //makes sure that both entities involved in fight have health
     {
-        playerattack()
-        if (enemy_health > 0)
+        playerattack() //calls player attack function to choose between styles and get damage
+        if (enemy_health > 0) //checks to see if fight is over after the attack. an enemy can't fight back if its dead already
         {
-            enemyattack()
+            enemyattack() //calls the enemy attack function for the enemy to take its turn then loops back until either the player or enemy dies
+        }
+        else
+        {
+                std::cout << "The enemy falls to the ground defeated!" << std:endl; //prints statement to show the enemy has been killed
+                main() //recalls main function so movement can be gone back to
         }
     }
     return 0;
 }
 
-int playerattack()
+int playerattack() //function to decide what attack the player will use
 {
-    std::cout << "What attack would you like to do? Melee, Ranged, Magic?" << std:endl;
-    cin >> attackstyle;
+    std::cout << "What attack would you like to do? Melee, Ranged, Magic?" << std:endl; //asks for input from user
+    cin >> attackstyle; //saves input from user as a variable to compare against
     if (attackstyle == "Melee")
     {
-        meleeattack()
-        enemy_health = enemy_health - damage
+        meleeattack() //calls melee attack function to calculate damage based on strength
+        enemy_health = enemy_health - damage //works out new health of enemy
+        if (enemy_health < 0) //conditional statement to see if enemy has been killed 
+        {
+                enemy_health = 0; //resets health to 0 so no negative values are ever involved
+        }
     }
-    if (attackstyle == "Ranged")
+    if (attackstyle == "Ranged") //calls ranged function
     {
         rangedattack()
+        enemy_health = enemy_health - damge
+        if (enemy_health < 0)
+        {
+                enemy_health = 0;
+        }
     }
     if (attackstyle == "Magic")
     {
-        magicattack()
+        magicattack() //calls magic function
+        enemy_health = enemy_health - damge
+        if (enemy_health < 0)
+        {
+                enemy_health = 0;
+        }
     }
 }
