@@ -7,20 +7,29 @@ public:
     int numentity;
     int entid;
     
-    addentity()
+    Entity( int _health, int _locx, int _locy, int _numentity, int _entid )
     {
-    numentity = numentity + 1
-    entid = entid + 1
+         health = _health;
+         locx = _locx;
+         locy = _locy;
+         numentity = _numentity;
+         entid = _entid;
     }
     
-    removeentity()
+    void addentity()
     {
-    numentity = numentity - 1
-    entid = ent - 1
+        numentity = numentity + 1
+        entid = entid + 1
+    }
+    
+    void removeentity()
+    {
+        numentity = numentity - 1
+        entid = ent - 1
     }
    
-    getentityid()
+    int getentityid()
     {
-    return entid;
+        return entid;
     }
 };
